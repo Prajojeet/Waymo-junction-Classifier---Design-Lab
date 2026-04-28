@@ -150,9 +150,6 @@ python evaluate.py --split val
 
 # Evaluate on test set
 python evaluate.py --split test
-
-# With Test-Time Augmentation (free ~2-3 F1 point gain, no retraining needed)
-python evaluate.py --split test --tta --tta_n 4
 ```
 
 The evaluation script produces:
