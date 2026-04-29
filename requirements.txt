@@ -1,0 +1,42 @@
+# ══════════════════════════════════════════════════════════════════════
+#  Junction Fusion Classifier — requirements.txt
+# ══════════════════════════════════════════════════════════════════════
+
+# ── STEP 1: Install PyTorch FIRST, separately, with the right CUDA tag.
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# Other CUDA versions:
+#   CUDA 11.8 → replace cu121 with cu118
+#   CUDA 12.4 → replace cu121 with cu124
+#   CPU only  → pip install torch torchvision
+#
+# Verify your CUDA version: nvidia-smi (top-right corner shows CUDA version)
+# ══════════════════════════════════════════════════════════════════════
+
+# ── SegFormer encoder (MiT-B2)
+transformers>=4.35.0,<5.0.0
+timm>=0.9.0                     # required internally by transformers for SegFormer
+
+# ── Data
+numpy>=1.24.0
+pandas>=2.0.0
+openpyxl>=3.1.0                 # required by pandas to read .xlsx files
+Pillow>=10.0.0
+
+# ── Machine learning utilities
+scikit-learn>=1.3.0             # f1_score, classification_report, confusion_matrix
+
+# ── Visualisation (evaluate.py plots)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ── Accelerated training utilities
+accelerate>=0.24.0              # optional but recommended for AMP stability
+
+# ══════════════════════════════════════════════════════════════════════
+#  INSTALL ORDER (copy-paste these 3 commands in order)
+#
+#  1. pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#  2. pip install -r requirements.txt
+#  3. python -c "import torch; print(torch.cuda.is_available())"  # should print True
+# ══════════════════════════════════════════════════════════════════════
