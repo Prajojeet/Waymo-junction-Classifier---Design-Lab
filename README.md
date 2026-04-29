@@ -94,7 +94,6 @@ new_dataset/
 ```bash
 # Clone the repository
 git clone https://github.com/Prajojeet/Waymo-junction-Classifier---Design-Lab.git
-cd Junction Classifier
 
 # Install dependencies
 pip install -r requirements.txt
