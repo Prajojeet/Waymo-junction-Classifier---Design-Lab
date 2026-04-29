@@ -59,7 +59,7 @@ junction_fusion/
 ├── train.py          # 3-phase graduated training loop with Mixup
 ├── evaluate.py       # Evaluation with optional Test-Time Augmentation (TTA)
 └── requirements.txt  # Python dependencies 
-└── Full implementatin in notebook format.ipynb # For full implementation in jupyter notebook format for Google Colab, Kaggle, etc 
+└── Full implementation in notebook format.ipynb # For full implementation in jupyter notebook format for Google Colab, Kaggle, etc 
 ```
 
 ---
